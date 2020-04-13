@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-6循环</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp',[ ]);
+        app.controller('myController',function ($scope) {
+
+            $scope.list = [101,202,303,404,500];
+
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <table>
+        <tr ng-repeat="entity in list">
+            <td>{{entity}}</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

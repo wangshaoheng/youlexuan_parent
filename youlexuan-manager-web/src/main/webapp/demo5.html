@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-5点击事件</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp',[ ]);
+        app.controller('myController',function ($scope) {
+                $scope.add=function () {//可以传值,也可以从$scope中取出双向绑定的值
+                    $scope.z = parseInt($scope.x) + parseInt($scope.y);
+                }
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <input ng-model="x" ><br>
+    <input ng-model="y" ><br>
+    {{z}}
+    <button ng-click="add()">相加</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

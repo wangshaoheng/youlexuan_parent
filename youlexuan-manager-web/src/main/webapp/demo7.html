@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-7循环对象数组</title>
+    <script src="angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp',[ ]);
+        app.controller('myController',function ($scope) {
+
+            $scope.list = [
+                {"name":"联想","firstChar":"L"},
+                {"name":"华为","firstChar":"H"},
+                {"name":"三星","firstChar":"S"},
+                {"name":"小米","firstChar":"X"},
+                {"name":"OPPO","firstChar":"O"}
+            ];
+
+        });
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <table>
+        <tr ng-repeat="entity in list">
+            <td>{{entity.name}},{{entity.firstChar}}</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
